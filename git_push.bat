@@ -12,4 +12,4 @@ echo commit
 git commit -m "Update Docs"
 
 echo push
-git push origin master -c http.extraheader="AUTHORIZATION: basic $(Env:SYSTEM_ACCESSTOKEN)"
+git -c http.extraheader="AUTHORIZATION: basic $(env:SYSTEM_ACCESSTOKEN)" push origin master 
