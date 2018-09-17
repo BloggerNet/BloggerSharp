@@ -13,21 +13,15 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
-
-- script: pwd
-  displayName: Pwd
-
-- script: type D:\a\1\Nuget\tempNuGet_39.config
-  displayName: Type Nuget Config
   
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
     packagesDirectory: '../s/packages'
-    verbosityRestore: 'Detailed'
+    config: 'Nuget.config'
     
-- script: nuget locals all -list
-  displayName: Show Nuget
+- script: tree
+  displayName: Show Directory
 
 - task: VSBuild@1
   inputs:
@@ -36,14 +30,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - script: tree
-  displayName: Show Directory
-
-- script: tree ..\packages
-  displayName: Show Packages
-  
-- script: tree ..\s\packages
-  displayName: Show Packages
-  
+  displayName: Show Directory  
 
 - script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
   displayName: Wyam Build
