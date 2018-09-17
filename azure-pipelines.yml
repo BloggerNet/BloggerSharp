@@ -31,7 +31,7 @@ steps:
 - script: git status
   displayName: Git diff
   
-- script: git commit "Update Docs"
+- script: git commit -m "Update Docs"
   displayName: Git commit
   
 - script: git push
