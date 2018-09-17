@@ -19,11 +19,8 @@ steps:
   
 - task: NuGetCommand@2
   inputs:
-    restoreSolution: '$(solution)'
-    packagesDirectory: '..\s\packages'
-    
-- script: dir D:\a\1\Nuget
-  displayName: Type config
+    command: 'custom'
+    arguments: 'restore D:\a\1\s\BloggerSharp.sln -Verbosity Detailed -NonInteractive -ConfigFile D:\a\1\s\NuGet.config'
   
 - script: tree D:\
   displayName: Show Directory
