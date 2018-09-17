@@ -19,6 +19,9 @@ steps:
     restoreSolution: '$(solution)'
     packagesDirectory: '../s/packages'
     verbosityRestore: 'Detailed'
+    
+- script: nuget locals all -list
+  displayName: Show Nuget
 
 - task: VSBuild@1
   inputs:
