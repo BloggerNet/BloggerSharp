@@ -15,5 +15,10 @@ git status
 echo commit
 git commit -m "Update Docs"
 
+echo signin
+echo machine github.com >> %HOMEPATH%\_netrc
+echo login %GITHUB_USER% >> %HOMEPATH%\_netrc
+echo password %GITHUB_TOKEN% >> %HOMEPATH%\_netrc
+
 echo push
-git -c http.extraheader="AUTHORIZATION: basic %GITHUB_TOKEN%" push origin master 
+git push origin master 
