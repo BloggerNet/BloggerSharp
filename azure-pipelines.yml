@@ -30,4 +30,4 @@ steps:
   
 - task: BatchScript@1
   inputs:
-    filename: git.bat
+    filename: git_push.bat
