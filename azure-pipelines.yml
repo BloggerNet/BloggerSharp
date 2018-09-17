@@ -14,11 +14,11 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
-- script: pwd
-  displayName: Pwd
+- script: mkdir packages
+  displayName: Make Directory
 
 - script: tree
   displayName: Show Directory
 
-- script: tree ../s
+- script: tree ../../packages
   displayName: Show Packages
