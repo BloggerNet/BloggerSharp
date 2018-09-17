@@ -17,7 +17,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-    packagesDirectory: 'packages'
+    packagesDirectory: './packages'
 
 - script: tree
   displayName: Show Directory
