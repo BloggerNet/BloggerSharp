@@ -14,7 +14,10 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
-- script: type ..\a\1\Nuget\tempNuGet_39.config
+- script: pwd
+  displayName: Pwd
+
+- script: type d\a\1\Nuget\tempNuGet_39.config
   displayName: Type Nuget Config
   
 - task: NuGetCommand@2
