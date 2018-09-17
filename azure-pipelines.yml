@@ -30,3 +30,9 @@ steps:
   
 - script: git status
   displayName: Git diff
+  
+- script: git commit "Update Docs"
+  displayName: Git commit
+  
+- script: git push
+  displayName: Git push
