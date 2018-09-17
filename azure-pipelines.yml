@@ -20,7 +20,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'custom'
-    arguments: 'restore D:\a\1\s\BloggerSharp.sln -Verbosity Detailed -NonInteractive -ConfigFile D:\a\1\s\NuGet.config'
+    arguments: 'install Blog\packages.config -Verbosity Detailed -NonInteractive -OutputDirectory packages'
   
 - script: tree D:\
   displayName: Show Directory
