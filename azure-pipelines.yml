@@ -20,5 +20,5 @@ steps:
 - script: tree
   displayName: Show Directory
 
-- script: tree ../../packages
+- script: tree .././packages
   displayName: Show Packages
