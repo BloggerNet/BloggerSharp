@@ -43,5 +43,5 @@ steps:
 - script: git commit -m "Update Docs"
   displayName: Git commit
   
-- script: git push origin master
-  displayName: Git -c http.extraheader="AUTHORIZATION: basic ***" push
+- script: git -c http.extraheader="AUTHORIZATION: basic ***" push origin master
+  displayName: Git push
