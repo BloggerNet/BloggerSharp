@@ -15,7 +15,7 @@ steps:
 - task: NuGetToolInstaller@0
 
 - script: type D:\a\1\Nuget\tempNuGet_51.config
-  dipslayName: Type config
+  displayName: Type config
   
 - script: tree D:\
   displayName: Show Directory
