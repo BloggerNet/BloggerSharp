@@ -22,7 +22,7 @@ steps:
     restoreSolution: '$(solution)'
     packagesDirectory: '..\s\packages'
     
-- script: tree
+- script: tree D:\
   displayName: Show Directory
 
 - task: VSBuild@1
