@@ -5,7 +5,13 @@
 #n Wyam.Less -v 1.5.1 -s packages
 #n Wyam.Minification -v 1.5.1 -s packages
 
-#a Core/bin/*/netstandard2.0/Core.dll
+public class ConfigConstant
+{
+    public const string Title = "Title";
+    public const string Description = "Description";
+    public const string CopyrightYear = "CopyrightYear";
+    public const string CopyrightOwner = "CopyrightOwner";
+}
 
 FileSystem.InputPaths.Add("Blog");
 FileSystem.OutputPath = "docs";

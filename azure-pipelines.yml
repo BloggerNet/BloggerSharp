@@ -18,16 +18,6 @@ steps:
   inputs:
     command: 'custom'
     arguments: 'install Blog\packages.config -Verbosity Detailed -NonInteractive -OutputDirectory packages'
-    
-- task: NuGetCommand@2
-  inputs:
-    command: 'custom'
-    arguments: 'restore Core\Core.csproj -Verbosity Detailed -NonInteractive -OutputDirectory packages'
-
-- task: VSBuild@1
-  inputs:
-    solution: '**/Core/*.csproj' 
-    configuration: '$(buildConfiguration)'
 
 - script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build --packages-path packages --use-local-packages
   displayName: Wyam Build

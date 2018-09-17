@@ -11,7 +11,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Blog", "Blog\", "{2D1CBFE4-FC29-484A-927B-F1CE5629E36F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.1"
-		ProjectReferences = "{57578577-0fd7-4b7b-8d2c-e6df34c3ef0d}|Core.dll;"
+		ProjectReferences = ""
 		Debug.AspNetCompiler.VirtualPath = "/localhost_62571"
 		Debug.AspNetCompiler.PhysicalPath = "Blog\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_62571\"
@@ -31,8 +31,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Blog", "Blog\", "{2D1CBFE4-
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{57578577-0FD7-4B7B-8D2C-E6DF34C3EF0D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,10 +41,6 @@ Global
 		{2D1CBFE4-FC29-484A-927B-F1CE5629E36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D1CBFE4-FC29-484A-927B-F1CE5629E36F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D1CBFE4-FC29-484A-927B-F1CE5629E36F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{57578577-0FD7-4B7B-8D2C-E6DF34C3EF0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57578577-0FD7-4B7B-8D2C-E6DF34C3EF0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57578577-0FD7-4B7B-8D2C-E6DF34C3EF0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57578577-0FD7-4B7B-8D2C-E6DF34C3EF0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
