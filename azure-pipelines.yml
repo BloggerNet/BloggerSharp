@@ -13,6 +13,9 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
+
+- script: tree D:\
+  displayName: Show Directory
   
 - task: NuGetCommand@2
   inputs:
