@@ -24,7 +24,7 @@ steps:
   inputs:
     solution: '$(solution)' 
     platform: '$(buildPlatform)'
-    configuration: $'(buildConfiguration)'
+    configuration: '$(buildConfiguration)'
 
 - script: tree
   displayName: Show Directory
