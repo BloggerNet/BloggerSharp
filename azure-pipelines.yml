@@ -25,5 +25,8 @@ steps:
 - script: tree
   displayName: Show Directory  
   
+- script: git add .
+  displayName: Git add track
+  
 - script: git status
   displayName: Git diff
