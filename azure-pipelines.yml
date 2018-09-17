@@ -16,17 +16,9 @@ steps:
 
 - script: pwd
   displayName: Pwd
- 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-    packagesDirectory: '../packages'
 
 - script: tree
   displayName: Show Directory
 
-- script: tree ../packages
+- script: tree ../s
   displayName: Show Packages
-
-- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
-  displayName: Wyam Build
