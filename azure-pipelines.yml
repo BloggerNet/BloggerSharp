@@ -17,11 +17,19 @@ steps:
 - script: mkdir packages
   displayName: Make Directory
 
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+    packagesDirectory: '../s/packages'
+
 - script: tree
   displayName: Show Directory
 
-- script: tree .../packages
+- script: tree ../packages
   displayName: Show Packages
+
+- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
+  displayName: Wyam Build
   
 - script: tree ../s/packages
   displayName: Show Packages
