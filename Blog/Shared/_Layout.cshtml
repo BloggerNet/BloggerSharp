@@ -1,0 +1,23 @@
+﻿@using Wyam.Common.Documents;
+@using Wyam.Common.Execution;
+@using Wyam.Common.Configuration;
+@using Wyam.Common.Meta;
+@using Core;
+
+@{
+    var context = Context as IExecutionContext;
+    var model = Model as IDocument;
+    IReadOnlySettings settings = context.Settings;
+    IMetadata metadate = model.Metadata;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Raw(model.String(ConfigConstant.Title, string.Empty))</title>
+    @Html.Partial("_Head")
+    @RenderSection("head", required: false)
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

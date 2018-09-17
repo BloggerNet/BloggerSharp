@@ -1,0 +1,15 @@
+﻿@using Wyam.Common.Documents;
+@using Wyam.Common.Execution;
+@using Wyam.Common.Configuration;
+@using Wyam.Common.Meta;
+
+@{
+    var context = Context as IExecutionContext;
+    var model = Model as IDocument;
+    IReadOnlySettings settings = context.Settings;
+    IMetadata metadate = model.Metadata;
+}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,0 +1,25 @@
+﻿#n Wyam.Markdown -v 1.5.1 -s packages
+#n Wyam.Razor -v 1.5.1 -s packages
+#n Wyam.Yaml -v 1.5.1 -s packages
+#n Wyam.Html -v 1.5.1 -s packages
+#n Wyam.Less -v 1.5.1 -s packages
+#n Wyam.Minification -v 1.5.1 -s packages
+
+#a Core/bin/*/netstandard2.0/Core.dll
+
+FileSystem.InputPaths.Add("Blog");
+FileSystem.OutputPath = "docs";
+
+Pipelines.Add("Index",
+	ReadFiles("Index.cshtml"),
+	FrontMatter(Yaml())
+);
+
+Pipelines.Add("RenderIndex",
+	If(
+		(doc,ctx) => ctx.Documents["Index"].Any(),
+		Documents("Index"),
+		Razor(),
+		WriteFiles((doc,ctx) => new FilePath("index.html"))
+	)
+);
