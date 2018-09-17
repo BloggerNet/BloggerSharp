@@ -1,3 +1,5 @@
+@echo off
+
 git config --global user.email "azure-pipelines[bot]@users.noreply.github.com"
 git config --global user.name "azure-pipelines[bot]"
 
@@ -7,4 +9,4 @@ git status
 
 git commit -m "Update Docs"
 
-git -c http.extraheader="AUTHORIZATION: basic %GITHUBPERSONALTOKEN%" push origin master 
+git -c http.extraheader="AUTHORIZATION: basic %GithubToken%" push origin master 
