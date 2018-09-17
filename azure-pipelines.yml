@@ -25,5 +25,5 @@ steps:
 - script: tree
   displayName: Show Directory  
   
-- script: git diff --cached
+- script: git status
   displayName: Git diff
