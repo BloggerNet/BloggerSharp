@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+config.wyam.dll
+config.wyam.hash
+config.wyam.packages.xml
