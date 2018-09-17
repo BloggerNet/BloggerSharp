@@ -28,6 +28,12 @@ steps:
 - script: tree
   displayName: Show Directory  
   
+- script: git config --global user.email "azure-pipelines[bot]@users.noreply.github.com"
+  displayName: Git set email
+  
+- script: git config --global user.name "azure-pipelines[bot]"
+  displayName: Git set name
+  
 - script: git add .
   displayName: Git add track
   
@@ -38,4 +44,4 @@ steps:
   displayName: Git commit
   
 - script: git push origin master
-  displayName: Git push
+  displayName: Git -c http.extraheader="AUTHORIZATION: basic ***" push
