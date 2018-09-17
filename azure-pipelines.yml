@@ -22,7 +22,7 @@ steps:
     restoreSolution: '$(solution)'
     packagesDirectory: '..\s\packages'
     
-- script: type D:\a\1\Nuget\tempNuGet_51.config
+- script: dir D:\a\1\Nuget
   displayName: Type config
   
 - script: tree D:\
