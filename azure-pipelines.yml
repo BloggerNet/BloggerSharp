@@ -21,6 +21,11 @@ steps:
   inputs:
     command: 'custom'
     arguments: 'install Blog\packages.config -Verbosity Detailed -NonInteractive -OutputDirectory packages'
+    
+- task: NuGetCommand@2
+  inputs:
+    command: 'custom'
+    arguments: 'restore Core\Core.csproj -Verbosity Detailed -NonInteractive -OutputDirectory packages'
   
 - script: tree D:\
   displayName: Show Directory
