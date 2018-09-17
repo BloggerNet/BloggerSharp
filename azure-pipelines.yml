@@ -14,7 +14,7 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
-- script: type D:\a\1\Nuget\tempNuGet_39.config
+- script: type ..\a\1\Nuget\tempNuGet_39.config
   displayName: Type Nuget Config
   
 - task: NuGetCommand@2
@@ -35,10 +35,10 @@ steps:
 - script: tree
   displayName: Show Directory
 
-- script: tree ../packages
+- script: tree ..\packages
   displayName: Show Packages
   
-- script: tree ../s/packages
+- script: tree ..\s\packages
   displayName: Show Packages
   
 
