@@ -14,13 +14,19 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
+- script: pwd
+  displayName: Pwd
+ 
 - task: NuGetCommand@2
   inputs:
     restoreSolution: '$(solution)'
-    packagesDirectory: './packages'
+    packagesDirectory: '../packages'
 
 - script: tree
   displayName: Show Directory
+
+- script: tree ../packages
+  displayName: Show Packages
 
 - script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
   displayName: Wyam Build
