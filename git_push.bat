@@ -7,4 +7,4 @@ git status
 
 git commit -m "Update Docs"
 
-git push origin master 
+git -c http.extraheader="AUTHORIZATION: basic %GITHUBPERSONALTOKEN%" push origin master 
