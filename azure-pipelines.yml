@@ -14,7 +14,20 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
 
+- script: git checkout master
+  displayName: Git checkout
+  
+- task: NuGetCommand@2
+  inputs:
+    command: 'custom'
+    arguments: 'install Blog\packages.config -Verbosity Detailed -NonInteractive -OutputDirectory packages'
+
+- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build --packages-path packages --use-local-packages
+  displayName: Wyam Build
+  
+- script: tree
+  displayName: Show Directory  
+  
 - task: BatchScript@1
   inputs:
-    filename: test.bat
-
+    filename: git_push.bat

@@ -1,12 +1,19 @@
 @echo off
 
-git config --global user.email "azure-pipelines[bot]@users.noreply.github.com"
-git config --global user.name "azure-pipelines[bot]"
+echo set email %GITHUB_EMAIL%
+git config --global user.email "%GITHUB_EMAIL%"
 
+echo set user %GITHUB_USER%
+git config --global user.name "%GITHUB_USER%"
+
+echo add track
 git add .
 
+echo show diff
 git status
 
+echo commit
 git commit -m "Update Docs"
 
-git -c http.extraheader="AUTHORIZATION: basic %GithubToken%" push origin master 
+echo push
+git -c http.extraheader="AUTHORIZATION: basic %GITHUB_TOKEN%" push origin master 
