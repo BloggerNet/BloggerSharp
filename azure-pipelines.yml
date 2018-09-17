@@ -29,8 +29,11 @@ steps:
     solution: '**/Core/*.csproj' 
     configuration: '$(buildConfiguration)'
 
-- script: tree
-  displayName: Show Directory  
-
 - script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build --packages-path packages --use-local-packages
   displayName: Wyam Build
+  
+- script: tree
+  displayName: Show Directory  
+  
+- script: git diff --cached
+  displayName: Git diff
