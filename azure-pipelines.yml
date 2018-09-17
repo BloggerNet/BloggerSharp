@@ -17,6 +17,7 @@ steps:
 - script: git remote remove origin
 - script: git remote add origin https://github.com/BloggerNet/BloggerSharp.git
 - script: git remote -v
+- script: git branch -a
 - script: git checkout master
   
 - task: NuGetCommand@2
