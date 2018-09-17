@@ -7,4 +7,4 @@ git status
 
 git commit -m "Update Docs"
 
-git -c http.extraheader="AUTHORIZATION: basic %SYSTEM_ACCESSTOKEN%" push origin master 
+git push origin master 
