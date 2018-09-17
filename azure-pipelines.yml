@@ -14,9 +14,6 @@ variables:
 steps:
 - task: NuGetToolInstaller@0
   
-- script: tree D:\
-  displayName: Show Directory
-  
 - task: NuGetCommand@2
   inputs:
     command: 'custom'
@@ -26,14 +23,10 @@ steps:
   inputs:
     command: 'custom'
     arguments: 'restore Core\Core.csproj -Verbosity Detailed -NonInteractive -OutputDirectory packages'
-  
-- script: tree D:\
-  displayName: Show Directory
 
 - task: VSBuild@1
   inputs:
     solution: '**/Core/*.csproj' 
-    platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
 - script: tree
