@@ -18,7 +18,8 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
     packagesDirectory: '../s/packages'
-    configFile: 'Nuget.config'
+    selectOrConfig: 'config'
+    nugetConfigPath: 'Nuget.config'
     
 - script: tree
   displayName: Show Directory
