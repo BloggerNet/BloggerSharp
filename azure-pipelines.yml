@@ -32,5 +32,5 @@ steps:
 - script: tree
   displayName: Show Directory  
 
-- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
+- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build --packages-path packages --use-local-packages
   displayName: Wyam Build
