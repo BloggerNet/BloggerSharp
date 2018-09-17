@@ -21,15 +21,19 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
     packagesDirectory: '../s/packages'
+    verbosityRestore: 'Detailed'
 
 - script: tree
   displayName: Show Directory
 
 - script: tree ../packages
   displayName: Show Packages
-
-- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
-  displayName: Wyam Build
   
 - script: tree ../s/packages
   displayName: Show Packages
+  
+- script: dir ../s/packages
+  displayName: Echo Directory
+
+- script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build
+  displayName: Wyam Build
