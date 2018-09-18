@@ -15,10 +15,7 @@ git status
 echo commit
 git commit -m "Update Docs"
 
-echo signin
-echo machine github.com >> %HOMEPATH%\_netrc
-echo login %GITHUB_USER% >> %HOMEPATH%\_netrc
-echo password %GITHUB_TOKEN% >> %HOMEPATH%\_netrc
-
 echo push
-git push -q https://aaa@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git master > NUL 2>&1 
+git push -q https://%GITHUB_TOKEN%@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git master > NUL 2>&1 
+
+echo finish
