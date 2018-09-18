@@ -7,7 +7,7 @@ echo show directory
 dir ghpages
 
 echo copy .git
-xcopy /e ghpages\.git docs\.git
+xcopy /e ghpages\.git docs\.git\
 
 echo remove directory
 rd /s /q ghpages
