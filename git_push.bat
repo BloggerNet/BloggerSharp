@@ -1,7 +1,7 @@
 @echo off
 
 echo clone
-git clone -q https://%GITHUB_TOKEN%@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git --branch=gh-pages ghpages
+git clone -q https://%GITHUB_TOKEN%@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git --branch=gh-pages ghpages > NUL 2>&1 
 
 echo show directory
 dir ghpages
