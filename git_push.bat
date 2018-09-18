@@ -1,21 +1,7 @@
 @echo off
 
-echo set email %GITHUB_EMAIL%
-git config --global user.email "%GITHUB_EMAIL%"
+echo clone
+git clone -q https://%GITHUB_TOKEN%@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git --branch=gh-pages ghpages
 
-echo set user %GITHUB_USER%
-git config --global user.name "%GITHUB_USER%"
-
-echo add track
-git add .
-
-echo show diff
-git status
-
-echo commit
-git commit -m "Update Docs"
-
-echo push
-git push -q https://%GITHUB_TOKEN%@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git master > NUL 2>&1 
-
-echo finish
+echo show directory
+dir pages
