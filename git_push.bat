@@ -21,4 +21,4 @@ echo login %GITHUB_USER% >> %HOMEPATH%\_netrc
 echo password %GITHUB_TOKEN% >> %HOMEPATH%\_netrc
 
 echo push
-git push origin master 
+git push -q https://aaa@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY%.git master > NUL 2>&1 
