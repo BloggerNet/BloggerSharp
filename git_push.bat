@@ -6,20 +6,17 @@ git clone -q https://%GITHUB_TOKEN%@github.com/%GITHUB_OWNER%/%GITHUB_REPOSITORY
 echo show directory
 dir ghpages
 
-echo copy .git
-xcopy /e ghpages\.git docs\.git\
-
 echo remove directory
-rd /s /q ghpages
+cd ghpages
+git rm *
+cd ..
 
 echo copy directory
-mkdir ghpages
 xcopy /e docs ghpages
 
 echo show directory
 dir ghpages
 
-echo cd to ghpages
 cd ghpages
 
 echo set email %GITHUB_EMAIL%
