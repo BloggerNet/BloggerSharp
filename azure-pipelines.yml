@@ -13,12 +13,6 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
-
-- script: git branch -a
-- script: git remote set-url origin https://github.com/BloggerNet/BloggerSharp.git
-- script: git remote -v
-- script: git branch -a
-- script: git checkout master
   
 - task: NuGetCommand@2
   inputs:
@@ -26,10 +20,7 @@ steps:
     arguments: 'install Blog\packages.config -Verbosity Detailed -NonInteractive -OutputDirectory packages'
 
 - script: .\packages\Wyam.1.5.1\tools\net462\wyam.exe build --packages-path packages --use-local-packages
-  displayName: Wyam Build
-  
-- script: tree
-  displayName: Show Directory  
+  displayName: Wyam Build 
   
 - task: BatchScript@1
   inputs:
